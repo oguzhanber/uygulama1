@@ -23,7 +23,7 @@
 		<a href="index.php">anasayfaya don</a>
 	</td>
 </tr>
-</table>
+</table>  
 </form>
 <?php
 	if(!file_exists("bilgi.txt"))
@@ -38,11 +38,13 @@
 		}
 		else
 		{
+ 		$dosya=fopen("bilgi.txt","a");
+		$yazilacak=$_POST["no"]-"-"-$_POST["adi"]"-"$_POST["soyadi"]-"/n";
+		fputs($dosya,$yazilacak);
 			
 			
 			
-			
-			
+		
 			
 			
 		}
